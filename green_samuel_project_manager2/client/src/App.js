@@ -1,0 +1,20 @@
+import React, { useState } from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Main from './views/Main';
+import ProductDetail from './components/ProductDetail';
+
+const App = () => {
+    
+  return(
+<div>
+    <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Main/>} default />
+            <Route element={<ProductDetail/>} path="/products/:id" />
+          </Routes> 
+    </BrowserRouter>
+      </div>
+  ) 
+}
+export default App;
+
